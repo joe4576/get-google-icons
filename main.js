@@ -20,7 +20,7 @@ async function writeIconNamesToFile(filePath, fileName) {
   const linesToWrite = [
     "export default class Icons {",
     ...iconNames.map(
-      (name) => `static get icon_${name}() { return "${name}" }`
+      (name) => `public get icon_${name}() { return "${name}" }`
     ),
     "}",
   ];
